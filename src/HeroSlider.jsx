@@ -4,10 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const images = [
-  "/fond.webp?height=400&width=800",
-  "/aut.png?height=400&width=800",
-];
+const images = ["/2.webp?height=400&width=800", "/1.jfif?height=400&width=800"];
 
 export default function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,7 +64,7 @@ export default function HeroSlider() {
         >
           {/* Fondo borroso */}
           <div
-            className="absolute inset-0 bg-cover bg-center filter blur scale-105"
+            className="absolute inset-0 bg-cover bg-center filter blur-sm scale-105"
             style={{ backgroundImage: `url(${images[currentIndex]})` }}
           />
           {/* Imagen principal */}
@@ -76,7 +73,7 @@ export default function HeroSlider() {
 
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col gap-2 items-start justify-center text-start text-white p-4 pl-5 md:pl-20">
         <motion.h1
-          className="text-6xl text-center  md:text-8xl font-bold "
+          className="text-6xl text-center  md:text-8xl font-bold   "
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -105,8 +102,18 @@ export default function HeroSlider() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <span className="font-bold"> FÁCIL</span> Y{" "}
+          <span className="font-bold"> FÁCIL</span> Y
           <span className="font-bold">RÁPIDO</span>
+        </motion.p>
+        <motion.p
+          className="text-2xl md:text-4xl text-black bg-white bg-opacity-50 px-2 py-0.5"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <span className="font-bold text-red-600">CONSULTÁ</span>
+          {" / "}
+          <span className="font-bold text-blue-600">COMPRÁ</span>
         </motion.p>
         <motion.button
           className="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300"

@@ -10,7 +10,7 @@ const carProducts = [
     id: 1,
     name: "Sedan Deportivo",
     price: "$35,000",
-    image: "/aut.png?height=200&width=300",
+    image: "/sedan.jpg?height=200&width=300",
     description:
       "Un sedán elegante y potente, perfecto para los amantes de la velocidad y el confort.",
   },
@@ -26,38 +26,14 @@ const carProducts = [
     id: 3,
     name: "Coupé de Lujo",
     price: "$55,000",
-    image: "/aut.png?height=200&width=300",
+    image: "/cupe.jfif?height=200&width=300",
     description:
       "Un coupé sofisticado que combina rendimiento y lujo en un paquete impresionante.",
-  },
-  {
-    id: 4,
-    name: "Hatchback Económico",
-    price: "$25,000",
-    image: "/placeholder.svg?height=200&width=300",
-    description:
-      "Eficiente en combustible y fácil de manejar, perfecto para la ciudad y conductores primerizos.",
-  },
-  {
-    id: 5,
-    name: "Camioneta Todoterreno",
-    price: "$45,000",
-    image: "/placeholder.svg?height=200&width=300",
-    description:
-      "Robusta y capaz, diseñada para enfrentar cualquier terreno y condición climática.",
-  },
-  {
-    id: 6,
-    name: "Convertible Clásico",
-    price: "$60,000",
-    image: "/placeholder.svg?height=200&width=300",
-    description:
-      "Un icónico convertible que combina el encanto del diseño clásico con tecnología moderna.",
   },
 ];
 
 // Reemplaza esto con tu número de WhatsApp real
-const whatsappNumber = "1234567890";
+const whatsappNumber = "3755538503";
 
 export default function CarProductGrid() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -84,9 +60,9 @@ export default function CarProductGrid() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 bg-gray-100 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        Nuestra Colección de Autos
+    <div className="container mx-auto px-4 pt-4 bg-gray-100 min-h-screen">
+      <h1 className="text-2xl font-bold text-start pb-4 text-gray-800">
+        Autos
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {carProducts.map((product) => (
@@ -154,7 +130,7 @@ export default function CarProductGrid() {
             >
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                className="absolute top-1 right-1 text-gray-500 hover:text-gray-700"
               >
                 <X size={24} />
               </button>

@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import HeroSlider from "./HeroSlider";
 import CarProductGrid from "./AutosSection";
+import Footer from "./footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <HeroSlider />
       <CarProductGrid />
+      <Footer />
     </div>
   );
 }
